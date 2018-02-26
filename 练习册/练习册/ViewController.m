@@ -12,6 +12,7 @@
 #import "ClipView.h"
 #import "ClearView.h"
 #import "ClockView.h"
+#import "FoldView.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -26,7 +27,13 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.title = @"练习册";
     
-    self.dataArr = @[@"手势解锁", @"图片水印", @"图片裁剪", @"图片擦除", @"时钟"];
+    self.dataArr = @[@[@"手势解锁", [LockView class]],
+                     @[@"图片水印", [WatermarkView class]],
+                     @[@"图片裁剪", [ClipView class]],
+                     @[@"图片擦除", [ClearView class]],
+                     @[@"时钟", [ClockView class]],
+                     @[@"折叠图片", [FoldView class]]
+                     ];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     tableView.dataSource = self;
@@ -46,7 +53,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    cell.textLabel.text = self.dataArr[indexPath.row];
+    cell.textLabel.text = self.dataArr[indexPath.row][0];
     return cell;
 }
 
@@ -54,27 +61,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UIViewController *vc = [[UIViewController alloc] init];
-    vc.title = self.dataArr[indexPath.row];
-    if ([vc.title isEqualToString:@"手势解锁"]) {
-        LockView *lockView = [[LockView alloc] initWithFrame:vc.view.bounds];
-        [vc.view addSubview:lockView];
-    } else if ([vc.title isEqualToString:@"图片水印"]) {
-        WatermarkView *watermarkView = [[WatermarkView alloc] initWithFrame:vc.view.bounds];
-        [vc.view addSubview:watermarkView];
-    } else if ([vc.title isEqualToString:@"图片裁剪"]) {
-        ClipView *clipView = [[ClipView alloc] initWithFrame:vc.view.bounds];
-        [vc.view addSubview:clipView];
-    } else if ([vc.title isEqualToString:@"图片擦除"]) {
-        ClearView *clearView = [[ClearView alloc] initWithFrame:vc.view.bounds];
-        [vc.view addSubview:clearView];
-    } else if ([vc.title isEqualToString:@"时钟"]) {
-        ClockView *clockView = [[ClockView alloc] initWithFrame:vc.view.bounds];
-        [vc.view addSubview:clockView];
-    }
-    
-    
+    vc.title = self.dataArr[indexPath.row][0];
+    [vc.view addSubview:[[self.dataArr[indexPath.row][1] alloc] initWithFrame:vc.view.bounds]];
     [self.navigationController pushViewController:vc animated:YES];
-    
 }
 
 - (void)didReceiveMemoryWarning {
