@@ -13,6 +13,7 @@
 #import "ClearView.h"
 #import "ClockView.h"
 #import "FoldView.h"
+#import "ReplicatorView.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -32,7 +33,8 @@
                      @[@"图片裁剪", [ClipView class]],
                      @[@"图片擦除", [ClearView class]],
                      @[@"时钟", [ClockView class]],
-                     @[@"折叠图片", [FoldView class]]
+                     @[@"折叠图片", [FoldView class]],
+                     @[@"复制layer的使用", [ReplicatorView class]],
                      ];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
