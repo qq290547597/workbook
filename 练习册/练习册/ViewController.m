@@ -7,13 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "LockView.h"
-#import "WatermarkView.h"
-#import "ClipView.h"
-#import "ClearView.h"
-#import "ClockView.h"
-#import "FoldView.h"
-#import "ReplicatorView.h"
+#import "Header.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -35,6 +29,7 @@
                      @[@"时钟", [ClockView class]],
                      @[@"折叠图片", [FoldView class]],
                      @[@"复制layer的使用", [ReplicatorView class]],
+                     @[@"仿QQ未读红点", [QQRedDotView class]],
                      ];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];

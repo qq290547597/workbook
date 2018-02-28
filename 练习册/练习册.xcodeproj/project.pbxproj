@@ -22,6 +22,7 @@
 		CD3292F71FFDFF6100516251 /* ClearView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3292F61FFDFF6100516251 /* ClearView.m */; };
 		CDA94007203FFD1C00B0BC7D /* FoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA94006203FFD1C00B0BC7D /* FoldView.m */; };
 		CDA940132043E47300B0BC7D /* ReplicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA940122043E47300B0BC7D /* ReplicatorView.m */; };
+		CDA94016204502F700B0BC7D /* QQRedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA94015204502F700B0BC7D /* QQRedDotView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,9 @@
 		CDA94006203FFD1C00B0BC7D /* FoldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoldView.m; sourceTree = "<group>"; };
 		CDA940112043E47300B0BC7D /* ReplicatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplicatorView.h; sourceTree = "<group>"; };
 		CDA940122043E47300B0BC7D /* ReplicatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplicatorView.m; sourceTree = "<group>"; };
+		CDA94014204502F700B0BC7D /* QQRedDotView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQRedDotView.h; sourceTree = "<group>"; };
+		CDA94015204502F700B0BC7D /* QQRedDotView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQRedDotView.m; sourceTree = "<group>"; };
+		CDA940172045033F00B0BC7D /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,10 +145,13 @@
 				CDA94006203FFD1C00B0BC7D /* FoldView.m */,
 				CDA940112043E47300B0BC7D /* ReplicatorView.h */,
 				CDA940122043E47300B0BC7D /* ReplicatorView.m */,
+				CDA94014204502F700B0BC7D /* QQRedDotView.h */,
+				CDA94015204502F700B0BC7D /* QQRedDotView.m */,
 				CD3292C31FFCCAB600516251 /* Assets.xcassets */,
 				CD3292C51FFCCAB600516251 /* LaunchScreen.storyboard */,
 				CD3292C81FFCCAB600516251 /* Info.plist */,
 				CD3292C91FFCCAB600516251 /* main.m */,
+				CDA940172045033F00B0BC7D /* Header.h */,
 			);
 			path = "练习册";
 			sourceTree = "<group>";
@@ -305,6 +312,7 @@
 				CDA94007203FFD1C00B0BC7D /* FoldView.m in Sources */,
 				CD3292F41FFDFADF00516251 /* ClipView.m in Sources */,
 				CD3292BF1FFCCAB600516251 /* ViewController.m in Sources */,
+				CDA94016204502F700B0BC7D /* QQRedDotView.m in Sources */,
 				CD3292EE1FFCD4CD00516251 /* LockView.m in Sources */,
 				CD3292CA1FFCCAB600516251 /* main.m in Sources */,
 				CD3292F11FFDC58100516251 /* WatermarkView.m in Sources */,
