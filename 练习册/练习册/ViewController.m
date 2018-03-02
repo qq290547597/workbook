@@ -30,6 +30,7 @@
                      @[@"折叠图片", [FoldView class]],
                      @[@"复制layer的使用", [ReplicatorView class]],
                      @[@"仿QQ未读红点", [QQRedDotView class]],
+                     @[@"健康步数", [StepCountView class]],
                      ];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];

@@ -23,6 +23,8 @@
 		CDA94007203FFD1C00B0BC7D /* FoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA94006203FFD1C00B0BC7D /* FoldView.m */; };
 		CDA940132043E47300B0BC7D /* ReplicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA940122043E47300B0BC7D /* ReplicatorView.m */; };
 		CDA94016204502F700B0BC7D /* QQRedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA94015204502F700B0BC7D /* QQRedDotView.m */; };
+		CDECC41A2046A4D10077CDE7 /* StepCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDECC4192046A4D10077CDE7 /* StepCountView.m */; };
+		CDECC41E2046ADAE0077CDE7 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDECC41D2046ADAE0077CDE7 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,10 @@
 		CDA94014204502F700B0BC7D /* QQRedDotView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQRedDotView.h; sourceTree = "<group>"; };
 		CDA94015204502F700B0BC7D /* QQRedDotView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQRedDotView.m; sourceTree = "<group>"; };
 		CDA940172045033F00B0BC7D /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		CDECC4182046A4D10077CDE7 /* StepCountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StepCountView.h; sourceTree = "<group>"; };
+		CDECC4192046A4D10077CDE7 /* StepCountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StepCountView.m; sourceTree = "<group>"; };
+		CDECC41B2046ADAE0077CDE7 /* 练习册.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "练习册.entitlements"; sourceTree = "<group>"; };
+		CDECC41D2046ADAE0077CDE7 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDECC41E2046ADAE0077CDE7 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +117,7 @@
 				CD3292D21FFCCAB700516251 /* 练习册Tests */,
 				CD3292DD1FFCCAB700516251 /* 练习册UITests */,
 				CD3292B81FFCCAB600516251 /* Products */,
+				CDECC41C2046ADAE0077CDE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +134,7 @@
 		CD3292B91FFCCAB600516251 /* 练习册 */ = {
 			isa = PBXGroup;
 			children = (
+				CDECC41B2046ADAE0077CDE7 /* 练习册.entitlements */,
 				CD3292BA1FFCCAB600516251 /* AppDelegate.h */,
 				CD3292BB1FFCCAB600516251 /* AppDelegate.m */,
 				CD3292BD1FFCCAB600516251 /* ViewController.h */,
@@ -147,6 +156,8 @@
 				CDA940122043E47300B0BC7D /* ReplicatorView.m */,
 				CDA94014204502F700B0BC7D /* QQRedDotView.h */,
 				CDA94015204502F700B0BC7D /* QQRedDotView.m */,
+				CDECC4182046A4D10077CDE7 /* StepCountView.h */,
+				CDECC4192046A4D10077CDE7 /* StepCountView.m */,
 				CD3292C31FFCCAB600516251 /* Assets.xcassets */,
 				CD3292C51FFCCAB600516251 /* LaunchScreen.storyboard */,
 				CD3292C81FFCCAB600516251 /* Info.plist */,
@@ -172,6 +183,14 @@
 				CD3292E01FFCCAB700516251 /* Info.plist */,
 			);
 			path = "练习册UITests";
+			sourceTree = "<group>";
+		};
+		CDECC41C2046ADAE0077CDE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDECC41D2046ADAE0077CDE7 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +261,11 @@
 					CD3292B61FFCCAB600516251 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					CD3292CE1FFCCAB700516251 = {
 						CreatedOnToolsVersion = 9.2;
@@ -317,6 +341,7 @@
 				CD3292CA1FFCCAB600516251 /* main.m in Sources */,
 				CD3292F11FFDC58100516251 /* WatermarkView.m in Sources */,
 				CD3292BC1FFCCAB600516251 /* AppDelegate.m in Sources */,
+				CDECC41A2046A4D10077CDE7 /* StepCountView.m in Sources */,
 				CD3292F71FFDFF6100516251 /* ClearView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "练习册/练习册.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ANCZ9H78E;
 				INFOPLIST_FILE = "练习册/Info.plist";
@@ -494,6 +520,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "练习册/练习册.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ANCZ9H78E;
 				INFOPLIST_FILE = "练习册/Info.plist";

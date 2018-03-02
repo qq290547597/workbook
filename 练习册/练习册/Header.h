@@ -17,5 +17,6 @@
 #import "FoldView.h"
 #import "ReplicatorView.h"
 #import "QQRedDotView.h"
+#import "StepCountView.h"
 
 #endif /* Header_h */
